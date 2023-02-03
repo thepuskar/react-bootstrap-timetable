@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+tr.date th {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 12px 0;
+}
+
+tr.date th.room {
+  font-size: 14px;
+}
+
+.timetable th,
+.timetable td {
+  padding: 1px 0;
+}
+
+.timetable th {
+  text-align: center;
+  padding: 8px 3px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.timetable td {
+  margin: 0;
+  border-top-width: 0px;
+  white-space: nowrap;
+}
+
+div.timetableouter {
+  width: calc(100% - 90px);
+  /* width: inherit; */
+  overflow-x: scroll;
+  margin-left: 83px;
+  overflow-y: visible;
+  padding-bottom: 1px;
+  border-left: 5px solid #efefef;
+}
+
+.timetable tr td:first-child,
+.timetable tr th:first-child {
+  /* position: absolute; */
+  width: 100px;
+  left: 0;
+  top: auto;
+  white-space: inherit;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.eventholder {
+  width: max-content;
+  max-width: 200px;
+}
+
+.eventholder .card {
+  border: 0;
+  border-radius: 0;
+}
+
+.eventholder .card.blue {
+  border-left: 5px solid #0d6efd;
+  background-color: #d2e0f6;
+}
+
+.eventholder .card.orange {
+  border-left: 5px solid #fd590d;
+  background-color: #f6ddd2;
+}
+
+.eventholder .card.green {
+  border-left: 5px solid #0dfd51;
+  background-color: #d2f6dc;
+}
+
+.eventholder .card.pink {
+  border-left: 5px solid #ea0dfd;
+  background-color: #f3d2f6;
+}
+
+.eventholder .card.pink {
+  border-left: 5px solid #ea0dfd;
+  background-color: #f3d2f6;
+}
+
+.eventholder .card.brown {
+  border-left: 5px solid #a38b88;
+  background-color: #e8e5e4;
+}
+
+.eventholder .card.cyan {
+  border-left: 5px solid #0dfdef;
+  background-color: #d2f6f4;
+}
+
+.eventholder .card.grey {
+  border-left: 5px solid #1c1c1c;
+  background-color: #d0d0d0;
+}
+
+.eventholder .card .card-header {
+  border: 0;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.eventholder .card .card-body {
+  border: 0;
+}
+
+.eventholder .card .card-body .card-text {
+  white-space: initial;
+}
+
+/* calendar */
+
+.calendar-wrapper {
+  max-width: 100%;
+  font: 100% system-ui;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.first-day {
+  grid-column-start: 4;
+}
+
+.day-name {
+  background: #eee;
+}
+
+h3 {
+  text-align: center;
+}
+
+ol.calendar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ol.calendar li {
+  padding: 5px;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+
+ol.calendar li:hover {
+  background-color: #e8f1ff;
+}
+
+ol.calendar li.blue {
+  border-color: #0d6efd;
+}
+
+ol.calendar li.orange {
+  border-color: #fd590d;
+}
+
+ol.calendar li.green {
+  border-color: #0dfd51;
+}
+
+ol.calendar li.pink {
+  border-color: #ea0dfd;
+}
+
+ol.calendar li.pink {
+  border-color: #ea0dfd;
+}
+
+ol.calendar li.brown {
+  border-color: #a38b88;
+}
+
+ol.calendar li.cyan {
+  border-color: #0dfdef;
+}
+
+ol.calendar li.grey {
+  border-color: #1c1c1c;
+}
+
+.currentweek {
+  background-color: #f4fcb3;
+}
