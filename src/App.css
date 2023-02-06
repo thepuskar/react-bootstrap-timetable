@@ -42,13 +42,13 @@ div.timetableouter {
 
 .timetable tr td:first-child,
 .timetable tr th:first-child {
-  /* position: absolute; */
+  position: absolute;
   width: 100px;
   left: 0;
   top: auto;
   white-space: inherit;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 0;
 }
 
 .eventholder {
