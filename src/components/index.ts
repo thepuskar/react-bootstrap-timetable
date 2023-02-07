@@ -1,2 +1,2 @@
 export * from "./head";
-export * from "./timetable";
+export * from "./dayTable";

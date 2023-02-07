@@ -1,6 +1,13 @@
-export function formatData(data: any[]): any[] {
-  const formattedData: any[] = [];
-  const groupedData: any | unknown = {};
+import { IEvent, IRoomData } from "../interface";
+
+interface IIFormattedData {
+  className: string;
+  data: IEvent[];
+}
+
+export function formatData(data: IEvent[]): IIFormattedData[] {
+  const formattedData: IIFormattedData[] = [];
+  const groupedData: IRoomData = {};
 
   data.forEach((item) => {
     if (!groupedData[item.roomName]) {
@@ -60,7 +67,7 @@ export function formatData(data: any[]): any[] {
       data.push({
         startTime: previousEnd,
         finishTime: "23:00:00",
-        colSpan: 23 - previousEndHour,
+        colSpan: 24 - previousEndHour,
         hasEvent: false,
       });
     }

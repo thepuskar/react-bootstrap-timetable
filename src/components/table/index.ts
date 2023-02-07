@@ -1,2 +1,2 @@
 export * from "./TableHead";
-export * from "./Timetable";
+export * from "./TableBody";
