@@ -12,7 +12,7 @@ export const DayTable = () => {
         <div className="overflow-auto timetableouter">
           <table className="table align-middle table-bordered timetable">
             <TableHead date={date} />
-            <TableBody tableData={DAY_DATA} />
+            <TableBody headerData={date} tableData={DAY_DATA} />
           </table>
         </div>
       </div>

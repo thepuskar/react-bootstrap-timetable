@@ -14,7 +14,10 @@ tr.date th.room {
 
 .timetable th,
 .timetable td {
-  padding: 1px 0;
+  padding: 1px;
+}
+.timetable td {
+  padding: 1px 0 !important;
 }
 
 .timetable th {
@@ -53,7 +56,6 @@ div.timetableouter {
 
 .eventholder {
   width: max-content;
-  min-width: 200px;
   width: 100%;
 }
 
@@ -191,4 +193,16 @@ ol.calendar li.grey {
 
 .currentweek {
   background-color: #f4fcb3;
+}
+
+.currentTime {
+  background-color: #f4fcb3 !important;
+  border: 1px solid #ced4da !important;
+}
+td {
+  border: none !important;
+}
+
+td:last-child {
+  border-right: 1px solid #ced4da !important;
 }

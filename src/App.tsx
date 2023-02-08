@@ -7,8 +7,6 @@ import { DayTable } from "./components";
 function App() {
   return (
     <div className="App">
-      <h1>Timetable</h1>
-
       <h3>Day timetable</h3>
       <DayTable />
     </div>

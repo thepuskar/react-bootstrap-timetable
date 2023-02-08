@@ -3,6 +3,9 @@ import { ITableHeadDateProps } from "../../interface";
 
 export const TableHead = ({ date }: ITableHeadDateProps) => {
   const nthHours = getNthHours(date?.length);
+  const curerrentDate = new Date();
+
+  const currentTime = curerrentDate?.getHours();
 
   return (
     <thead>
@@ -17,7 +20,11 @@ export const TableHead = ({ date }: ITableHeadDateProps) => {
       <tr>
         <th></th>
         {nthHours?.map((hour, i) => (
-          <th key={hour + i} data-key={hour}>
+          <th
+            className={currentTime.toString() === hour ? "currentTime" : ""}
+            key={hour + i}
+            data-key={hour}
+          >
             {hour}
           </th>
         ))}
