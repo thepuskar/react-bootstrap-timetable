@@ -3,7 +3,6 @@ import { ITableHeadDateProps } from "../../interface";
 
 export const TableHead = ({ date }: ITableHeadDateProps) => {
   const nthHours = getNthHours(date?.length);
-  const curerrentDate = new Date();
 
   return (
     <thead>

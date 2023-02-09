@@ -15,7 +15,7 @@ export const EventCard = ({ eventInfo, style }: IEventProps) => {
         </div>
         <div className="card-body p-1">
           <div className="card-text">
-            <strong>B</strong>: {eventInfo?.subjectCode}
+            <strong>B</strong>: {eventInfo?.subjectCode || eventInfo?.startDate}
             <br />
             <strong>S</strong>: {eventInfo?.subjectName}
             <br />
