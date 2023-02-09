@@ -1,11 +1,9 @@
-import { getNthHours, formatDate } from "../../utils";
+import { getNthHours, formatDate, currentTime } from "../../utils";
 import { ITableHeadDateProps } from "../../interface";
 
 export const TableHead = ({ date }: ITableHeadDateProps) => {
   const nthHours = getNthHours(date?.length);
   const curerrentDate = new Date();
-
-  const currentTime = curerrentDate?.getHours();
 
   return (
     <thead>
