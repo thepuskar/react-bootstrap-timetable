@@ -1,4 +1,4 @@
-import { useUuid } from "../../hooks";
+import { useUUID } from "../../hooks";
 import { formatData } from "../../utils";
 import { EventCard } from "../event";
 import { IEvent } from "../../interface";
@@ -9,7 +9,7 @@ interface ITableHeadProps {
 
 export const TableBody = ({ tableData }: ITableHeadProps) => {
   const formattedData = formatData(tableData);
-  const uid = useUuid();
+  const uid = useUUID();
   return (
     <tbody>
       {formattedData?.map((event: any, i: number) => (

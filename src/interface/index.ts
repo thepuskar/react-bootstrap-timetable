@@ -1,5 +1,6 @@
 export interface ITableHeadDateProps {
-  date: string[];
+  date: Date[];
+  showCurrentTime?: boolean;
 }
 
 export interface IEvent {

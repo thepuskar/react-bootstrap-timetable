@@ -47,7 +47,7 @@ export const weeklyData = [
               finishTime: "07:00:00",
               colSpan: 6,
               isEvent: true,
-              teacherName: "Puskar Adhikari",
+              teacherName: "Spinal anatomy and biomechanics.",
             },
             {
               colSpan: 17,
@@ -94,5 +94,50 @@ export const weeklyData = [
         ],
       },
     ],
+  },
+];
+
+const ORIGINAL_DATA = [
+  {
+    startDate: "2023-01-01T00:00:00",
+    finishDate: "2023-01-01T00:00:00",
+    roomName: "Room 1",
+    startTime: "09:00:00",
+    finishTime: "17:00:00",
+  },
+  {
+    startDate: "2023-01-02T00:00:00",
+    finishDate: "2023-01-02T00:00:00",
+    roomName: "AAA",
+    startTime: "07:00:00",
+    finishTime: "11:00:00",
+  },
+  {
+    startDate: "2023-01-03T00:00:00",
+    finishDate: "2023-01-03T00:00:00",
+    roomName: "AAA",
+    startTime: "09:00:00",
+    finishTime: "11:00:00",
+  },
+  {
+    startDate: "2023-01-07T00:00:00",
+    finishDate: "2023-01-07T00:00:00",
+    roomName: "AAA",
+    startTime: "09:00:00",
+    finishTime: "11:00:00",
+  },
+  {
+    startDate: "2023-01-02T00:00:00",
+    finishDate: "2023-01-02T00:00:00",
+    roomName: "Paramatta Room",
+    startTime: "07:00:00",
+    finishTime: "11:00:00",
+  },
+  {
+    startDate: "2023-01-02T00:00:00",
+    finishDate: "2023-01-02T00:00:00",
+    roomName: "Paramatta Room",
+    startTime: "07:00:00",
+    finishTime: "10:00:00",
   },
 ];

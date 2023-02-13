@@ -57,6 +57,7 @@ div.timetableouter {
 .eventholder {
   width: max-content;
   width: 100%;
+  /* min-weight: 200px; */
 }
 
 .eventholder .card {

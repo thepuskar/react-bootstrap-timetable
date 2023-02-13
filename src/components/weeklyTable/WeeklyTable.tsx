@@ -1,18 +1,22 @@
-import { getNthHours, formatDate, isEmpty } from "../../utils";
-import { useUuid } from "../../hooks";
-import { EventCard } from "../event";
-
-import { ITableHeadDateProps } from "../../interface";
-import { weeklyData } from "./data";
 import React from "react";
 
+import { isEmpty, generateDateArray } from "../../utils";
+import { useUUID } from "../../hooks";
+
+import { EventCard } from "../event";
+import { TableHead } from "../table";
+
+import { weeklyData } from "./data";
+
 export const WeeklyTable = () => {
+  const initialDate = new Date("2023-01-01T00:00:00");
+  const dateArray = generateDateArray(initialDate, 7);
   return (
     <div className="row mb-2">
       <div className="col-md-10">
         <div className="overflow-auto timetableouter">
           <table className="table align-middle table-bordered timetable">
-            <TableHead date={weeklyData[0]?.day} />
+            <TableHead showCurrentTime={false} date={dateArray} />
             <TableBody tableData={weeklyData[0]?.event} />
           </table>
         </div>
@@ -21,37 +25,12 @@ export const WeeklyTable = () => {
   );
 };
 
-const TableHead = ({ date }: ITableHeadDateProps) => {
-  const nthHours = getNthHours(date?.length);
-
-  return (
-    <thead>
-      <tr className="date">
-        <th className="room">Room</th>
-        {date?.map((item: string) => (
-          <th colSpan={24} className="text-center" key={item}>
-            {formatDate(item)}
-          </th>
-        ))}
-      </tr>
-      <tr>
-        <th></th>
-        {nthHours?.map((hour, i) => (
-          <th key={hour + i} data-key={hour}>
-            {hour}
-          </th>
-        ))}
-      </tr>
-    </thead>
-  );
-};
-
 interface ITableHeadProps {
   tableData: any[];
 }
 
 const TableBody = ({ tableData }: ITableHeadProps) => {
-  const uid = useUuid();
+  const uid = useUUID();
 
   return (
     <tbody>
