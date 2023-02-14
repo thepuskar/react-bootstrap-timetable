@@ -1,3 +1,9 @@
+/**
+ * If the object is null, undefined, has a length property with a non-zero value, or has at least one
+ * property, it's not empty. Otherwise, it's empty
+ * @param {any} obj - The object to check
+ * @returns The function isEmpty is being returned.
+ */
 export function isEmpty(obj: any) {
   let hasOwnProperty = Object.prototype.hasOwnProperty;
   // null and undefined are "empty"

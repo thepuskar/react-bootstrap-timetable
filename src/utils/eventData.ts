@@ -1,5 +1,17 @@
 import { formatJsDateToNormalDate } from "./date";
 
+/**
+ * It takes an array of objects, groups them by roomName, sorts them by startDate, then loops through
+ * the start and end dates, and for each date, it checks if there is data for that date, and if there
+ * is, it adds it to the newData array, and if there isn't, it adds an empty array.
+ * @param {string} startTime - "2020-01-01T00:00:00.000Z"
+ * @param {string} endTime - "2020-01-31T23:00:00.000Z"
+ * @param {any} eventData - [{
+ * @returns An array of objects. Each object has a roomName property and a data property. The data
+ * property is an array of arrays. Each array in the data property represents a day. Each array in the
+ * data property has objects in it. Each object has a startTime, finishTime, colSpan, and isEvent
+ * property.
+ */
 export function eventData(startTime: string, endTime: string, eventData: any) {
   const formattedData: any[] = [];
 
