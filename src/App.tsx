@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/css/app.min.css";
+import "./assets/css/app.css";
 
 import { DayTable, WeeklyTable } from "./components";
 

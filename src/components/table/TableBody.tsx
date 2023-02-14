@@ -1,25 +1,40 @@
-import { useUUID } from "../../hooks";
-import { formatData } from "../../utils";
-import { EventCard } from "../event";
-import { IEvent } from "../../interface";
+import React from "react";
 
+import { isEmpty } from "../../utils";
+import { useUUID } from "../../hooks";
+import { EventCard } from "../event";
 interface ITableHeadProps {
-  tableData: IEvent[];
+  tableData: any[];
 }
 
 export const TableBody = ({ tableData }: ITableHeadProps) => {
-  const formattedData = formatData(tableData);
   const uid = useUUID();
+
   return (
     <tbody>
-      {formattedData?.map((event: any, i: number) => (
+      {tableData?.map((event: any, i: number) => (
         <tr key={uid + i}>
-          <td>{event?.className}</td>
-          {event?.data?.map((eventInfo: any, i: number) => (
-            <td key={uid + i} colSpan={eventInfo?.colSpan}>
-              {eventInfo?.hasEvent ? <EventCard eventInfo={eventInfo} /> : null}
-            </td>
-          ))}
+          <td>{event?.roomName}</td>
+
+          {event?.data?.map((data: any, j: number) => {
+            return (
+              <React.Fragment key={uid + j}>
+                {isEmpty(data) ? (
+                  <td colSpan={24} />
+                ) : (
+                  <>
+                    {data?.map((event: any, i: any) => (
+                      <td colSpan={event?.colSpan} data-id={i} key={uid + i}>
+                        {event?.isEvent ? (
+                          <EventCard eventInfo={event} />
+                        ) : null}
+                      </td>
+                    ))}
+                  </>
+                )}
+              </React.Fragment>
+            );
+          })}
         </tr>
       ))}
     </tbody>

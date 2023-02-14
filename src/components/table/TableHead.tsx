@@ -13,8 +13,8 @@ export const TableHead = ({
     <thead>
       <tr className="date">
         <th className="room">Room</th>
-        {date?.map((item: Date) => (
-          <th colSpan={24} className="text-center" key={uid}>
+        {date?.map((item: Date, i: number) => (
+          <th colSpan={24} className="text-center" key={uid + i}>
             {formatDate(item)}
           </th>
         ))}

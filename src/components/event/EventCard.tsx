@@ -1,3 +1,4 @@
+import { formatDate } from "../../utils";
 interface IEventProps {
   eventInfo: any;
   style?: any;
@@ -16,6 +17,10 @@ export const EventCard = ({ eventInfo, style }: IEventProps) => {
         <div className="card-body p-1">
           <div className="card-text">
             <strong>B</strong>: {eventInfo?.subjectCode || eventInfo?.startDate}
+            <p>
+              {formatDate(eventInfo?.startDate)} to{" "}
+              {formatDate(eventInfo?.finishDate)}
+            </p>
             <br />
             <strong>S</strong>: {eventInfo?.subjectName}
             <br />

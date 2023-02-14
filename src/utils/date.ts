@@ -120,3 +120,17 @@ export function generateDaysInMonth(
 
 /* Getting the current hour from the current date. */
 export const currentTime = curerrentDate?.getHours();
+
+/**
+ * It takes a JavaScript Date object and returns a string in the format YYYY-MM-DD
+ * @param {Date} date - Date - The date to be formatted
+ * @returns A string in the format of YYYY-MM-DD
+ */
+export function formatJsDateToNormalDate(date: Date): string {
+  const realMonth: number = date.getMonth() + 1;
+  let month: string = realMonth < 10 ? "0" + realMonth : String(realMonth);
+  let day: string =
+    date.getDate() < 10 ? "0" + date.getDate() : String(date.getDate());
+
+  return [date.getFullYear(), month, day].join("-");
+}
