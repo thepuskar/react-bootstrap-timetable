@@ -1,3 +1,6 @@
+export * from "./excel-interface";
+export * from "./context-interface";
+
 export interface ITableHeadDateProps {
   date: Date[];
   showCurrentTime?: boolean;
@@ -33,4 +36,11 @@ export interface IEvent {
 
 export interface IRoomData {
   [key: string]: IEvent[];
+}
+
+export interface ITablePayload {
+  header: string[];
+  body:
+    | Array<{ [key: string]: string | number | boolean }>
+    | Array<(string | number | boolean)[]>;
 }
