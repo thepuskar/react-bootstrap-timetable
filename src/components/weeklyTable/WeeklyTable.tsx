@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { generateDateArray, eventData } from "../../utils";
 import { useDownloadExcel } from "../../hooks/useDownloadExcel";
 import { TableHead, TableBody } from "../table";
+import { htmlTableToCsv } from "../../lib/exportCSV";
 
 import { ORIGINAL_DATA } from "./data";
 
@@ -26,11 +27,18 @@ export const WeeklyTable = () => {
       <button className="btn btn-default" onClick={onDownload}>
         Download
       </button>
+      <button
+        className="btn btn-default"
+        onClick={() => htmlTableToCsv("viewTimetable", "timetable")}
+      >
+        Download as CSV
+      </button>
       <div className="col-md-10">
         <div className="overflow-auto timetableouter">
           <table
             className="table align-middle table-bordered timetable"
             ref={tableRef}
+            id="viewTimetable"
           >
             <TableHead showCurrentTime={false} date={dateArray} />
             <TableBody tableData={formattedWeeklyData} />
